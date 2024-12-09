@@ -7,7 +7,7 @@
 int main(int argc, char *argv[]) {
   QApplication app(argc, argv);
 
-  // This is a change!
+  // This is a new change!
   ThemeManager &themeManager = ThemeManager::instance();
 
   themeManager.setDarkMode(true);
