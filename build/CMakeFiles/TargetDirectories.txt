@@ -1,0 +1,3 @@
+/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles/CypherVault.dir
+/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles/edit_cache.dir
+/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles/rebuild_cache.dir
