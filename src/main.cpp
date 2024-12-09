@@ -8,6 +8,7 @@ int main(int argc, char *argv[]) {
   QApplication app(argc, argv);
 
   // This is a new change!
+  // this is another change to check if git-updates works
   ThemeManager &themeManager = ThemeManager::instance();
 
   themeManager.setDarkMode(true);
