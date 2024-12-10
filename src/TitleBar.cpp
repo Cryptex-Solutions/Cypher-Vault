@@ -1,7 +1,6 @@
 #include "TitleBar.h"
 #include "SvgManager.h"
 #include "ThemeManager.h"
-#include <iostream>
 
 TitleBar::TitleBar(QWidget *parent) : QWidget(parent), dragPosition(QPoint()) {
   setObjectName("TitleBar");
@@ -86,7 +85,6 @@ void TitleBar::mousePressEvent(QMouseEvent *event) {
 }
 
 void TitleBar::mouseMoveEvent(QMouseEvent *event) {
-  std::cout << "Active" << std::endl;
   if (event->buttons() & Qt::LeftButton) {
     parentWidget()->move(event->globalPos() - dragPosition);
     event->accept();

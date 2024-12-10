@@ -222,14 +222,4 @@ CMakeFiles/CypherVault.dir/src/ThemeManager.cpp.o: \
  /usr/include/qt5/QtCore/qsharedpointer.h \
  /usr/include/qt5/QtCore/qshareddata.h /usr/include/qt5/QtCore/qhash.h \
  /usr/include/qt5/QtCore/qsharedpointer_impl.h \
- /usr/include/qt5/QtCore/QString /usr/include/qt5/QtCore/qstring.h \
- /usr/include/c++/14/iostream /usr/include/c++/14/ostream \
- /usr/include/c++/14/ios /usr/include/c++/14/bits/basic_ios.h \
- /usr/include/c++/14/bits/locale_facets.h /usr/include/c++/14/cwctype \
- /usr/include/wctype.h /usr/include/bits/wctype-wchar.h \
- /usr/include/c++/14/x86_64-redhat-linux/bits/ctype_base.h \
- /usr/include/c++/14/x86_64-redhat-linux/bits/ctype_inline.h \
- /usr/include/c++/14/bits/locale_facets.tcc \
- /usr/include/c++/14/bits/basic_ios.tcc \
- /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
- /usr/include/c++/14/bits/istream.tcc
+ /usr/include/qt5/QtCore/QString /usr/include/qt5/QtCore/qstring.h

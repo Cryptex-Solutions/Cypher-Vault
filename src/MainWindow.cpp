@@ -12,6 +12,8 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
   setupUI();
   setupConnections();
 
+  // set the default darkmode
+  themeManager.setDarkMode(themeManager.isDarkMode());
   // Apply default theme
   applyTheme();
 }
@@ -47,6 +49,8 @@ void MainWindow::setupUI() {
 
   // Connect the toggle button to the toggleTheme slot
   connect(toggleButton, &QPushButton::clicked, this, &MainWindow::toggleTheme);
+
+  svgManager.setColorGroup("TitleBar", themeManager.getGroupColor("TitleBar"));
 }
 
 void MainWindow::setupConnections() {
@@ -63,10 +67,10 @@ void MainWindow::setupConnections() {
 }
 
 void MainWindow::applyTheme() {
-  setStyleSheet(themeManager.getStyleSheet());
-
-  // Update icon colors for the current theme
+  setStyleSheet(
+      themeManager.getStyleSheet()); // Update icon colors for the current theme
   svgManager.setColorGroup("TitleBar", themeManager.getGroupColor("TitleBar"));
+  themeManager.notifyObservers();
 }
 
 void MainWindow::toggleTheme() {

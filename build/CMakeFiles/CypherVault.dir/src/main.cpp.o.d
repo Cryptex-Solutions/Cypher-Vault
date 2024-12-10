@@ -258,8 +258,6 @@ CMakeFiles/CypherVault.dir/src/main.cpp.o: \
  /usr/include/qt5/QtSvg/qsvgrenderer.h \
  /usr/include/qt5/QtCore/qxmlstream.h \
  /usr/include/qt5/QtSvg/qtsvgglobal.h \
- /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/ThemeManager.h \
- /usr/include/qt5/QtGui/QPalette /usr/include/qt5/QtGui/qpalette.h \
  /usr/include/qt5/QtWidgets/QApplication \
  /usr/include/qt5/QtWidgets/qapplication.h \
  /usr/include/qt5/QtCore/qcoreapplication.h \

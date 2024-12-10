@@ -1,5 +1,4 @@
 #include "ThemeManager.h"
-#include <iostream>
 
 // Singleton instance
 ThemeManager &ThemeManager::instance() {
@@ -8,10 +7,7 @@ ThemeManager &ThemeManager::instance() {
 }
 
 // Private constructor
-ThemeManager::ThemeManager() : darkMode(true) {
-  setupStyleSheets();
-  notifyObservers();
-}
+ThemeManager::ThemeManager() : darkMode(true) { setupStyleSheets(); }
 
 void ThemeManager::setupStyleSheets() {
   // Dark Style Sheet
@@ -63,10 +59,7 @@ void ThemeManager::setupStyleSheets() {
     )";
 }
 
-void ThemeManager::setDarkMode(bool enable) {
-  darkMode = enable;
-  notifyObservers();
-}
+void ThemeManager::setDarkMode(bool enable) { darkMode = enable; }
 
 bool ThemeManager::isDarkMode() const { return darkMode; }
 
@@ -75,11 +68,10 @@ QString ThemeManager::getStyleSheet() const {
 }
 
 QString ThemeManager::getGroupColor(const QString &groupName) const {
-  std::cout << "Dark Mode: " << darkMode << std::endl;
+
   if (darkMode) {
     if (groupName == "TitleBar") {
-      std::cout << "dark " << std::endl;
-      return "#FF0000";
+      return "#7d7d7d";
     } else if (groupName == "Sidebar") {
       return "#BBBBBB";
     } else if (groupName == "Menu") {
@@ -87,8 +79,7 @@ QString ThemeManager::getGroupColor(const QString &groupName) const {
     }
   } else {
     if (groupName == "TitleBar") {
-      std::cout << "light " << std::endl;
-      return "#00FF00";
+      return "#616161";
     } else if (groupName == "Sidebar") {
       return "#333333";
     } else if (groupName == "Menu") {
