@@ -1,10 +1,5 @@
 # Blacklist everything by default
-/*
+*
 
-#What the fuck kyle
 # Whitelist the src/ folder
-!/src/
-
-# Add the .gitignore file and CMakeList to the whitelist
-!.gitignore
-!CMakeLists.txt
+!src
