@@ -1,3 +1,4 @@
+-DWIN32
 -o
-/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SvgIcons.cpp
-/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SvgIcons.h
+C:/Users/gabet/Desktop/Projects/Cypher-Vault/build/src/moc_SvgIcons.cpp
+C:/Users/gabet/Desktop/Projects/Cypher-Vault/src/SvgIcons.h
