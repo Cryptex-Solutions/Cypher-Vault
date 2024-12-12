@@ -1,0 +1,5 @@
+# Ignore build and cache files
+.cache/
+build/
+*.log
+*.tmp

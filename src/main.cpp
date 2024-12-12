@@ -17,6 +17,8 @@ int main(int argc, char *argv[]) {
   SvgManager::instance().assignToGroup("Close", "TitleBar");
 
   // This initialises Window on run
+
+  // This is a new comment to test git ignore
   MainWindow mainWindow;
   mainWindow.show();
 

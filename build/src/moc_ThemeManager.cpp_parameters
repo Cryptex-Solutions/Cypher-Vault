@@ -1,4 +1,3 @@
--DWIN32
 -o
-C:/Users/gabet/Desktop/Projects/Cypher-Vault/build/src/moc_ThemeManager.cpp
-C:/Users/gabet/Desktop/Projects/Cypher-Vault/src/ThemeManager.h
+/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_ThemeManager.cpp
+/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/ThemeManager.h
