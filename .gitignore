@@ -4,5 +4,3 @@
 # Whitelist the src/ folder
 !src/
 
-# Whitelist the CMakeLists.txt file
-!CMakeLists.txt
