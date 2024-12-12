@@ -3,7 +3,6 @@ project(CypherVault)
 
 set(CMAKE_CXX_STANDARD 17)
 
-#suck my cock kyle
 # Find Qt packages (Widgets and Svg)
 find_package(Qt5 REQUIRED COMPONENTS Widgets Svg)
 
