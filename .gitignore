@@ -1,3 +1,5 @@
-# Ignore build and cache files
-/build/
-/.cache/
+# Blacklist everything by default
+/*
+
+# Whitelist the src/ folder
+!/src/
