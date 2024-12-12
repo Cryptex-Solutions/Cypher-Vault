@@ -73,6 +73,7 @@ QString ThemeManager::getStyleSheet() const {
   return darkMode ? darkStyleSheet : lightStyleSheet;
 }
 
+// Gets the color for SVG icons
 QString ThemeManager::getGroupColor(const QString &groupName) const {
 
   if (darkMode) {
