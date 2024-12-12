@@ -1,3 +1,4 @@
+-DWIN32
 -o
-/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_MainContentPage.cpp
-/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/MainContentPage.h
+C:/Users/gabet/Desktop/Projects/Cypher-Vault/build/src/moc_MainContentPage.cpp
+C:/Users/gabet/Desktop/Projects/Cypher-Vault/src/MainContentPage.h

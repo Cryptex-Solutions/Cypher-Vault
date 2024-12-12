@@ -1,10 +1,10 @@
 # Hashes of file build rules.
-0ba269652e6054085e8f003de2a65c6f src/moc_MainContentPage.cpp
-e12d0e26f31d02d274e5fb261b086df6 src/moc_MainWindow.cpp
-0245f4de53100d446dfd7e1b0ed1f5af src/moc_SettingsPage.cpp
-70587695e208ebdbd40545b5cf0e3f92 src/moc_SideBar.cpp
-c7489f4e5d1d49991ebb20fa50fcebda src/moc_SvgIcons.cpp
-7fc678c3edf6252b5b2a9e755e32fb72 src/moc_SvgManager.cpp
-4f6f824c5af527a7bb2bbf2bff1b2ab7 src/moc_ThemeManager.cpp
-789768b5857c539799804544a9e5c2d9 src/moc_TitleBar.cpp
-63c0df90f173939a7be884ff14113f57 src/moc_Utils.cpp
+e68d843bbd8e5c7697fc6a5b61c35e25 src/moc_MainContentPage.cpp
+3e72fcae32a9c43bbab6ee8adb7eefd8 src/moc_MainWindow.cpp
+0e0e19c23f1240f68c7a39890cfc7b46 src/moc_SettingsPage.cpp
+d2d74cf89e3ee006dfb55b92baf7ca1c src/moc_SideBar.cpp
+40e92b2bb05db555126b09ef409b0fdb src/moc_SvgIcons.cpp
+56da9df0644d341b8bddca5ba3da35bc src/moc_SvgManager.cpp
+cc623922b804fcc9cdb8909af9cff4f6 src/moc_ThemeManager.cpp
+d508705f4bad1d46c00846f674ff5821 src/moc_TitleBar.cpp
+a9958fc84a6a0c68c4e53a4c9bb3a3a4 src/moc_Utils.cpp
