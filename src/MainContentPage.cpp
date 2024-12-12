@@ -8,3 +8,5 @@ MainContentPage::MainContentPage(QWidget *parent) : QWidget(parent) {
   layout->addWidget(label);
   setLayout(layout);
 }
+
+//testing
