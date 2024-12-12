@@ -17,7 +17,6 @@ int main(int argc, char *argv[]) {
   SvgManager::instance().assignToGroup("Close", "TitleBar");
 
   // This initialises Window on run
-  // New comment wowza
   MainWindow mainWindow;
   mainWindow.show();
 
