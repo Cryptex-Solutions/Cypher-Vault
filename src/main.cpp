@@ -16,6 +16,7 @@ int main(int argc, char *argv[]) {
   SvgManager::instance().assignToGroup("Plus", "TitleBar");
   SvgManager::instance().assignToGroup("Close", "TitleBar");
 
+  // THIS IS A COMMENT RIGHT HERE CAN YOU SEE THIS
   MainWindow mainWindow;
   mainWindow.show();
 
