@@ -22,5 +22,3 @@ int main(int argc, char *argv[]) {
 
   return app.exec();
 }
-
-// This is a very cool very epic change, to make sure this shit works
