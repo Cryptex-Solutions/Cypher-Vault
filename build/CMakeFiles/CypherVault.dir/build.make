@@ -101,10 +101,14 @@ src/moc_SvgManager.cpp: /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-V
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating src/moc_SvgManager.cpp"
 	cd /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src && /usr/lib64/qt5/bin/moc @/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SvgManager.cpp_parameters
 
+src/moc_SideBar.cpp: /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SideBar.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating src/moc_SideBar.cpp"
+	cd /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src && /usr/lib64/qt5/bin/moc @/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SideBar.cpp_parameters
+
 CMakeFiles/CypherVault.dir/src/main.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/main.cpp.o: /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/main.cpp
 CMakeFiles/CypherVault.dir/src/main.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CypherVault.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CypherVault.dir/src/main.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/main.cpp.o -MF CMakeFiles/CypherVault.dir/src/main.cpp.o.d -o CMakeFiles/CypherVault.dir/src/main.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/main.cpp
 
 CMakeFiles/CypherVault.dir/src/main.cpp.i: cmake_force
@@ -118,7 +122,7 @@ CMakeFiles/CypherVault.dir/src/main.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/MainWindow.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/MainWindow.cpp.o: /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/MainWindow.cpp
 CMakeFiles/CypherVault.dir/src/MainWindow.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CypherVault.dir/src/MainWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CypherVault.dir/src/MainWindow.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/MainWindow.cpp.o -MF CMakeFiles/CypherVault.dir/src/MainWindow.cpp.o.d -o CMakeFiles/CypherVault.dir/src/MainWindow.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/MainWindow.cpp
 
 CMakeFiles/CypherVault.dir/src/MainWindow.cpp.i: cmake_force
@@ -132,7 +136,7 @@ CMakeFiles/CypherVault.dir/src/MainWindow.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/ThemeManager.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/ThemeManager.cpp.o: /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/ThemeManager.cpp
 CMakeFiles/CypherVault.dir/src/ThemeManager.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CypherVault.dir/src/ThemeManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/CypherVault.dir/src/ThemeManager.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/ThemeManager.cpp.o -MF CMakeFiles/CypherVault.dir/src/ThemeManager.cpp.o.d -o CMakeFiles/CypherVault.dir/src/ThemeManager.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/ThemeManager.cpp
 
 CMakeFiles/CypherVault.dir/src/ThemeManager.cpp.i: cmake_force
@@ -146,7 +150,7 @@ CMakeFiles/CypherVault.dir/src/ThemeManager.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/SettingsPage.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/SettingsPage.cpp.o: /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SettingsPage.cpp
 CMakeFiles/CypherVault.dir/src/SettingsPage.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/CypherVault.dir/src/SettingsPage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/CypherVault.dir/src/SettingsPage.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/SettingsPage.cpp.o -MF CMakeFiles/CypherVault.dir/src/SettingsPage.cpp.o.d -o CMakeFiles/CypherVault.dir/src/SettingsPage.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SettingsPage.cpp
 
 CMakeFiles/CypherVault.dir/src/SettingsPage.cpp.i: cmake_force
@@ -160,7 +164,7 @@ CMakeFiles/CypherVault.dir/src/SettingsPage.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/MainContentPage.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/MainContentPage.cpp.o: /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/MainContentPage.cpp
 CMakeFiles/CypherVault.dir/src/MainContentPage.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/CypherVault.dir/src/MainContentPage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/CypherVault.dir/src/MainContentPage.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/MainContentPage.cpp.o -MF CMakeFiles/CypherVault.dir/src/MainContentPage.cpp.o.d -o CMakeFiles/CypherVault.dir/src/MainContentPage.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/MainContentPage.cpp
 
 CMakeFiles/CypherVault.dir/src/MainContentPage.cpp.i: cmake_force
@@ -174,7 +178,7 @@ CMakeFiles/CypherVault.dir/src/MainContentPage.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/Utils.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/Utils.cpp.o: /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/Utils.cpp
 CMakeFiles/CypherVault.dir/src/Utils.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/CypherVault.dir/src/Utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/CypherVault.dir/src/Utils.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/Utils.cpp.o -MF CMakeFiles/CypherVault.dir/src/Utils.cpp.o.d -o CMakeFiles/CypherVault.dir/src/Utils.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/Utils.cpp
 
 CMakeFiles/CypherVault.dir/src/Utils.cpp.i: cmake_force
@@ -188,7 +192,7 @@ CMakeFiles/CypherVault.dir/src/Utils.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/TitleBar.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/TitleBar.cpp.o: /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/TitleBar.cpp
 CMakeFiles/CypherVault.dir/src/TitleBar.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/CypherVault.dir/src/TitleBar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/CypherVault.dir/src/TitleBar.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/TitleBar.cpp.o -MF CMakeFiles/CypherVault.dir/src/TitleBar.cpp.o.d -o CMakeFiles/CypherVault.dir/src/TitleBar.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/TitleBar.cpp
 
 CMakeFiles/CypherVault.dir/src/TitleBar.cpp.i: cmake_force
@@ -202,7 +206,7 @@ CMakeFiles/CypherVault.dir/src/TitleBar.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/SvgManager.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/SvgManager.cpp.o: /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SvgManager.cpp
 CMakeFiles/CypherVault.dir/src/SvgManager.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/CypherVault.dir/src/SvgManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/CypherVault.dir/src/SvgManager.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/SvgManager.cpp.o -MF CMakeFiles/CypherVault.dir/src/SvgManager.cpp.o.d -o CMakeFiles/CypherVault.dir/src/SvgManager.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SvgManager.cpp
 
 CMakeFiles/CypherVault.dir/src/SvgManager.cpp.i: cmake_force
@@ -213,10 +217,24 @@ CMakeFiles/CypherVault.dir/src/SvgManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CypherVault.dir/src/SvgManager.cpp.s"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SvgManager.cpp -o CMakeFiles/CypherVault.dir/src/SvgManager.cpp.s
 
+CMakeFiles/CypherVault.dir/src/SideBar.cpp.o: CMakeFiles/CypherVault.dir/flags.make
+CMakeFiles/CypherVault.dir/src/SideBar.cpp.o: /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SideBar.cpp
+CMakeFiles/CypherVault.dir/src/SideBar.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/CypherVault.dir/src/SideBar.cpp.o"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/SideBar.cpp.o -MF CMakeFiles/CypherVault.dir/src/SideBar.cpp.o.d -o CMakeFiles/CypherVault.dir/src/SideBar.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SideBar.cpp
+
+CMakeFiles/CypherVault.dir/src/SideBar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CypherVault.dir/src/SideBar.cpp.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SideBar.cpp > CMakeFiles/CypherVault.dir/src/SideBar.cpp.i
+
+CMakeFiles/CypherVault.dir/src/SideBar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CypherVault.dir/src/SideBar.cpp.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SideBar.cpp -o CMakeFiles/CypherVault.dir/src/SideBar.cpp.s
+
 CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o: src/moc_MainWindow.cpp
 CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o -MF CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o.d -o CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_MainWindow.cpp
 
 CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.i: cmake_force
@@ -230,7 +248,7 @@ CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.o: src/moc_ThemeManager.cpp
 CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.o -MF CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.o.d -o CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_ThemeManager.cpp
 
 CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.i: cmake_force
@@ -244,7 +262,7 @@ CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.o: src/moc_SettingsPage.cpp
 CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.o -MF CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.o.d -o CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SettingsPage.cpp
 
 CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.i: cmake_force
@@ -258,7 +276,7 @@ CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/moc_MainContentPage.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/moc_MainContentPage.cpp.o: src/moc_MainContentPage.cpp
 CMakeFiles/CypherVault.dir/src/moc_MainContentPage.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_MainContentPage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_MainContentPage.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/moc_MainContentPage.cpp.o -MF CMakeFiles/CypherVault.dir/src/moc_MainContentPage.cpp.o.d -o CMakeFiles/CypherVault.dir/src/moc_MainContentPage.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_MainContentPage.cpp
 
 CMakeFiles/CypherVault.dir/src/moc_MainContentPage.cpp.i: cmake_force
@@ -272,7 +290,7 @@ CMakeFiles/CypherVault.dir/src/moc_MainContentPage.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.o: src/moc_Utils.cpp
 CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.o -MF CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.o.d -o CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_Utils.cpp
 
 CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.i: cmake_force
@@ -286,7 +304,7 @@ CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.o: src/moc_TitleBar.cpp
 CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.o -MF CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.o.d -o CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_TitleBar.cpp
 
 CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.i: cmake_force
@@ -300,7 +318,7 @@ CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.o: src/moc_SvgIcons.cpp
 CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.o -MF CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.o.d -o CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SvgIcons.cpp
 
 CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.i: cmake_force
@@ -314,7 +332,7 @@ CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.s: cmake_force
 CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o: CMakeFiles/CypherVault.dir/flags.make
 CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o: src/moc_SvgManager.cpp
 CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o -MF CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o.d -o CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SvgManager.cpp
 
 CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.i: cmake_force
@@ -324,6 +342,20 @@ CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.i: cmake_force
 CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.s"
 	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SvgManager.cpp -o CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.s
+
+CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o: CMakeFiles/CypherVault.dir/flags.make
+CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o: src/moc_SideBar.cpp
+CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o: CMakeFiles/CypherVault.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o -MF CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o.d -o CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SideBar.cpp
+
+CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.i"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SideBar.cpp > CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.i
+
+CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.s"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SideBar.cpp -o CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.s
 
 # Object files for target CypherVault
 CypherVault_OBJECTS = \
@@ -335,6 +367,7 @@ CypherVault_OBJECTS = \
 "CMakeFiles/CypherVault.dir/src/Utils.cpp.o" \
 "CMakeFiles/CypherVault.dir/src/TitleBar.cpp.o" \
 "CMakeFiles/CypherVault.dir/src/SvgManager.cpp.o" \
+"CMakeFiles/CypherVault.dir/src/SideBar.cpp.o" \
 "CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o" \
 "CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.o" \
 "CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.o" \
@@ -342,7 +375,8 @@ CypherVault_OBJECTS = \
 "CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.o" \
 "CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.o" \
 "CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.o" \
-"CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o"
+"CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o" \
+"CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o"
 
 # External object files for target CypherVault
 CypherVault_EXTERNAL_OBJECTS =
@@ -355,6 +389,7 @@ CypherVault: CMakeFiles/CypherVault.dir/src/MainContentPage.cpp.o
 CypherVault: CMakeFiles/CypherVault.dir/src/Utils.cpp.o
 CypherVault: CMakeFiles/CypherVault.dir/src/TitleBar.cpp.o
 CypherVault: CMakeFiles/CypherVault.dir/src/SvgManager.cpp.o
+CypherVault: CMakeFiles/CypherVault.dir/src/SideBar.cpp.o
 CypherVault: CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o
 CypherVault: CMakeFiles/CypherVault.dir/src/moc_ThemeManager.cpp.o
 CypherVault: CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.o
@@ -363,13 +398,14 @@ CypherVault: CMakeFiles/CypherVault.dir/src/moc_Utils.cpp.o
 CypherVault: CMakeFiles/CypherVault.dir/src/moc_TitleBar.cpp.o
 CypherVault: CMakeFiles/CypherVault.dir/src/moc_SvgIcons.cpp.o
 CypherVault: CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o
+CypherVault: CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o
 CypherVault: CMakeFiles/CypherVault.dir/build.make
 CypherVault: /usr/lib64/libQt5Svg.so.5.15.15
 CypherVault: /usr/lib64/libQt5Widgets.so.5.15.15
 CypherVault: /usr/lib64/libQt5Gui.so.5.15.15
 CypherVault: /usr/lib64/libQt5Core.so.5.15.15
 CypherVault: CMakeFiles/CypherVault.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable CypherVault"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable CypherVault"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CypherVault.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -383,6 +419,7 @@ CMakeFiles/CypherVault.dir/clean:
 CMakeFiles/CypherVault.dir/depend: src/moc_MainContentPage.cpp
 CMakeFiles/CypherVault.dir/depend: src/moc_MainWindow.cpp
 CMakeFiles/CypherVault.dir/depend: src/moc_SettingsPage.cpp
+CMakeFiles/CypherVault.dir/depend: src/moc_SideBar.cpp
 CMakeFiles/CypherVault.dir/depend: src/moc_SvgIcons.cpp
 CMakeFiles/CypherVault.dir/depend: src/moc_SvgManager.cpp
 CMakeFiles/CypherVault.dir/depend: src/moc_ThemeManager.cpp

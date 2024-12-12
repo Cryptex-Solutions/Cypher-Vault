@@ -201,6 +201,30 @@ src/SettingsPage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CypherVault.dir/build.make CMakeFiles/CypherVault.dir/src/SettingsPage.cpp.s
 .PHONY : src/SettingsPage.cpp.s
 
+src/SideBar.o: src/SideBar.cpp.o
+.PHONY : src/SideBar.o
+
+# target to build an object file
+src/SideBar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CypherVault.dir/build.make CMakeFiles/CypherVault.dir/src/SideBar.cpp.o
+.PHONY : src/SideBar.cpp.o
+
+src/SideBar.i: src/SideBar.cpp.i
+.PHONY : src/SideBar.i
+
+# target to preprocess a source file
+src/SideBar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CypherVault.dir/build.make CMakeFiles/CypherVault.dir/src/SideBar.cpp.i
+.PHONY : src/SideBar.cpp.i
+
+src/SideBar.s: src/SideBar.cpp.s
+.PHONY : src/SideBar.s
+
+# target to generate assembly for a file
+src/SideBar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CypherVault.dir/build.make CMakeFiles/CypherVault.dir/src/SideBar.cpp.s
+.PHONY : src/SideBar.cpp.s
+
 src/SvgManager.o: src/SvgManager.cpp.o
 .PHONY : src/SvgManager.o
 
@@ -393,6 +417,30 @@ src/moc_SettingsPage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CypherVault.dir/build.make CMakeFiles/CypherVault.dir/src/moc_SettingsPage.cpp.s
 .PHONY : src/moc_SettingsPage.cpp.s
 
+src/moc_SideBar.o: src/moc_SideBar.cpp.o
+.PHONY : src/moc_SideBar.o
+
+# target to build an object file
+src/moc_SideBar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CypherVault.dir/build.make CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o
+.PHONY : src/moc_SideBar.cpp.o
+
+src/moc_SideBar.i: src/moc_SideBar.cpp.i
+.PHONY : src/moc_SideBar.i
+
+# target to preprocess a source file
+src/moc_SideBar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CypherVault.dir/build.make CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.i
+.PHONY : src/moc_SideBar.cpp.i
+
+src/moc_SideBar.s: src/moc_SideBar.cpp.s
+.PHONY : src/moc_SideBar.s
+
+# target to generate assembly for a file
+src/moc_SideBar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CypherVault.dir/build.make CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.s
+.PHONY : src/moc_SideBar.cpp.s
+
 src/moc_SvgIcons.o: src/moc_SvgIcons.cpp.o
 .PHONY : src/moc_SvgIcons.o
 
@@ -531,6 +579,9 @@ help:
 	@echo "... src/SettingsPage.o"
 	@echo "... src/SettingsPage.i"
 	@echo "... src/SettingsPage.s"
+	@echo "... src/SideBar.o"
+	@echo "... src/SideBar.i"
+	@echo "... src/SideBar.s"
 	@echo "... src/SvgManager.o"
 	@echo "... src/SvgManager.i"
 	@echo "... src/SvgManager.s"
@@ -555,6 +606,9 @@ help:
 	@echo "... src/moc_SettingsPage.o"
 	@echo "... src/moc_SettingsPage.i"
 	@echo "... src/moc_SettingsPage.s"
+	@echo "... src/moc_SideBar.o"
+	@echo "... src/moc_SideBar.i"
+	@echo "... src/moc_SideBar.s"
 	@echo "... src/moc_SvgIcons.o"
 	@echo "... src/moc_SvgIcons.i"
 	@echo "... src/moc_SvgIcons.s"

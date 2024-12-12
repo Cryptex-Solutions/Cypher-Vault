@@ -7,13 +7,12 @@ TitleBar::TitleBar(QWidget *parent) : QWidget(parent), dragPosition(QPoint()) {
 
   // Create the title bar panel widget
   panel = new QWidget(this);
-  panel->setObjectName("TitleBarPanel");
 
   panel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
   // Create title bar components
   titleLabel = new QLabel("Cypher-Vault", this);
-  titleLabel->setObjectName("TitleBarTitle");
+  titleLabel->setContentsMargins(5, 5, 5, 5);
 
   minimizeButton = new QPushButton(this);
   maximizeButton = new QPushButton(this);

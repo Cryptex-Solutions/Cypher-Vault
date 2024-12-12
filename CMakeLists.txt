@@ -15,6 +15,7 @@ set(SOURCES
     src/Utils.cpp
     src/TitleBar.cpp
     src/SvgManager.cpp
+    src/SideBar.cpp
 )
 
 set(HEADERS
@@ -26,6 +27,7 @@ set(HEADERS
     src/TitleBar.h
     src/SvgIcons.h
     src/SvgManager.h
+    src/SideBar.h
 )
 
 # Qt's Meta-Object Compiler (moc) for headers

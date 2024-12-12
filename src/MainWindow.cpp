@@ -1,4 +1,5 @@
 #include "MainWindow.h"
+#include "SideBar.h"
 #include "SvgManager.h"
 #include "ThemeManager.h"
 #include <QPushButton>
@@ -12,42 +13,35 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
   setupUI();
   setupConnections();
 
-  // set the default darkmode
   themeManager.setDarkMode(themeManager.isDarkMode());
-  // Apply default theme
   applyTheme();
 }
 
 MainWindow::~MainWindow() {}
 
 void MainWindow::setupUI() {
-  // Remove default window title bar
   setWindowFlags(Qt::FramelessWindowHint);
 
-  // Create layouts
   mainLayout = new QVBoxLayout(this);
 
-  // Create custom title bar
   titleBar = new TitleBar(this);
 
-  // Add title bar and placeholder for main content
+  SideBar *sideBar = new SideBar(this);
+
   mainLayout->addWidget(titleBar);
 
-  // Add a button for toggling dark mode (for testing)
+  mainLayout->addWidget(sideBar);
+
   QPushButton *toggleButton = new QPushButton("Toggle Dark Mode", this);
   mainLayout->addWidget(toggleButton);
 
-  // Set layout
-  mainLayout->addStretch(); // Placeholder for main content
+  mainLayout->addStretch();
 
-  // Set margins and spacing
   mainLayout->setContentsMargins(0, 0, 0, 0);
   mainLayout->setSpacing(0);
 
-  // Set window size
   resize(800, 600);
 
-  // Connect the toggle button to the toggleTheme slot
   connect(toggleButton, &QPushButton::clicked, this, &MainWindow::toggleTheme);
 
   svgManager.setColorGroup("TitleBar", themeManager.getGroupColor("TitleBar"));
@@ -67,8 +61,7 @@ void MainWindow::setupConnections() {
 }
 
 void MainWindow::applyTheme() {
-  setStyleSheet(
-      themeManager.getStyleSheet()); // Update icon colors for the current theme
+  setStyleSheet(themeManager.getStyleSheet());
   svgManager.setColorGroup("TitleBar", themeManager.getGroupColor("TitleBar"));
   themeManager.notifyObservers();
 }

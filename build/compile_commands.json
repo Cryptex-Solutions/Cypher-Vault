@@ -49,6 +49,12 @@
 },
 {
   "directory": "/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build",
+  "command": "/usr/lib64/ccache/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SVG_LIB -DQT_WIDGETS_LIB -I/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtSvg -g -std=gnu++17 -fPIC -o CMakeFiles/CypherVault.dir/src/SideBar.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SideBar.cpp",
+  "file": "/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SideBar.cpp",
+  "output": "CMakeFiles/CypherVault.dir/src/SideBar.cpp.o"
+},
+{
+  "directory": "/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build",
   "command": "/usr/lib64/ccache/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SVG_LIB -DQT_WIDGETS_LIB -I/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtSvg -g -std=gnu++17 -fPIC -o CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_MainWindow.cpp",
   "file": "/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_MainWindow.cpp",
   "output": "CMakeFiles/CypherVault.dir/src/moc_MainWindow.cpp.o"
@@ -94,5 +100,11 @@
   "command": "/usr/lib64/ccache/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SVG_LIB -DQT_WIDGETS_LIB -I/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtSvg -g -std=gnu++17 -fPIC -o CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SvgManager.cpp",
   "file": "/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SvgManager.cpp",
   "output": "CMakeFiles/CypherVault.dir/src/moc_SvgManager.cpp.o"
+},
+{
+  "directory": "/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build",
+  "command": "/usr/lib64/ccache/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SVG_LIB -DQT_WIDGETS_LIB -I/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src -isystem /usr/include/qt5 -isystem /usr/include/qt5/QtWidgets -isystem /usr/include/qt5/QtGui -isystem /usr/include/qt5/QtCore -isystem /usr/lib64/qt5/mkspecs/linux-g++ -isystem /usr/include/qt5/QtSvg -g -std=gnu++17 -fPIC -o CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o -c /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SideBar.cpp",
+  "file": "/home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/build/src/moc_SideBar.cpp",
+  "output": "CMakeFiles/CypherVault.dir/src/moc_SideBar.cpp.o"
 }
 ]

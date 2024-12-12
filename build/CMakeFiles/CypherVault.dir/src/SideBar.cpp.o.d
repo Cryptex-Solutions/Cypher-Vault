@@ -1,8 +1,7 @@
-CMakeFiles/CypherVault.dir/src/MainWindow.cpp.o: \
- /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/MainWindow.cpp \
+CMakeFiles/CypherVault.dir/src/SideBar.cpp.o: \
+ /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SideBar.cpp \
  /usr/include/stdc-predef.h \
- /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/MainWindow.h \
- /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/TitleBar.h \
+ /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SideBar.h \
  /usr/include/qt5/QtWidgets/QHBoxLayout \
  /usr/include/qt5/QtWidgets/qboxlayout.h \
  /usr/include/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -233,30 +232,9 @@ CMakeFiles/CypherVault.dir/src/MainWindow.cpp.o: \
  /usr/include/qt5/QtCore/qsharedpointer_impl.h \
  /usr/include/qt5/QtGui/qfont.h /usr/include/qt5/QtGui/qfontmetrics.h \
  /usr/include/qt5/QtGui/qfontinfo.h /usr/include/qt5/QtGui/qcursor.h \
- /usr/include/qt5/QtGui/qkeysequence.h /usr/include/qt5/QtGui/QMouseEvent \
- /usr/include/qt5/QtGui/qevent.h /usr/include/qt5/QtCore/qcoreevent.h \
- /usr/include/qt5/QtCore/qvariant.h /usr/include/qt5/QtCore/qmap.h \
- /usr/include/c++/14/variant /usr/include/qt5/QtCore/qset.h \
- /usr/include/qt5/QtCore/qurl.h /usr/include/qt5/QtCore/qfile.h \
- /usr/include/qt5/QtCore/qfiledevice.h /usr/include/qt5/QtGui/qvector2d.h \
- /usr/include/qt5/QtGui/qtouchdevice.h \
+ /usr/include/qt5/QtGui/qkeysequence.h \
  /usr/include/qt5/QtWidgets/QPushButton \
  /usr/include/qt5/QtWidgets/qpushbutton.h \
  /usr/include/qt5/QtWidgets/qabstractbutton.h \
  /usr/include/qt5/QtGui/qicon.h /usr/include/qt5/QtWidgets/QWidget \
- /usr/include/qt5/QtWidgets/qwidget.h \
- /usr/include/qt5/QtWidgets/QVBoxLayout \
- /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SideBar.h \
- /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/SvgManager.h \
- /usr/include/qt5/QtGui/QIcon /usr/include/qt5/QtGui/qicon.h \
- /usr/include/qt5/QtCore/QMap /usr/include/qt5/QtCore/qmap.h \
- /usr/include/qt5/QtCore/QObject /usr/include/qt5/QtCore/qobject.h \
- /usr/include/qt5/QtGui/QPainter /usr/include/qt5/QtGui/qpainter.h \
- /usr/include/qt5/QtGui/qtextoption.h /usr/include/qt5/QtGui/qpen.h \
- /usr/include/qt5/QtCore/QString /usr/include/qt5/QtCore/qstring.h \
- /usr/include/qt5/QtSvg/QSvgRenderer \
- /usr/include/qt5/QtSvg/qsvgrenderer.h \
- /usr/include/qt5/QtCore/qxmlstream.h \
- /usr/include/qt5/QtSvg/qtsvgglobal.h \
- /home/joe/.local/share/Cryptomator/mnt/Projects/Cypher-Vault/src/ThemeManager.h \
- /usr/include/qt5/QtGui/QPalette /usr/include/qt5/QtGui/qpalette.h
+ /usr/include/qt5/QtWidgets/qwidget.h

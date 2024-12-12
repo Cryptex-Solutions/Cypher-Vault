@@ -32,6 +32,9 @@ void ThemeManager::setupStyleSheets() {
         #TitleBar QPushButton:pressed {
             background-color: #666;
         }
+        #SideBar QWidget {
+            background-color: #3D3D3D;
+        }
     )";
 
   // Light Style Sheet
@@ -55,6 +58,9 @@ void ThemeManager::setupStyleSheets() {
         }
         #TitleBar QPushButton:pressed {
             background-color: #C0C0C0;
+        }
+        #SideBar QWidget {
+            background-color: #3D3D3D;
         }
     )";
 }
