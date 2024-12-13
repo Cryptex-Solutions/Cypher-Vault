@@ -3,8 +3,6 @@ project(CypherVault)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Change in here too
-
 # Find Qt packages (Widgets and Svg)
 find_package(Qt5 REQUIRED COMPONENTS Widgets Svg)
 
@@ -35,7 +33,11 @@ set(HEADERS
 # Qt's Meta-Object Compiler (moc) for headers
 qt5_wrap_cpp(MOC_HEADERS ${HEADERS})
 
-add_executable(CypherVault WIN32 ${SOURCES} ${MOC_HEADERS})
+# Add resources.qrc for embedding resources like the application icon
+qt5_add_resources(RESOURCE_FILES src/resources.qrc)
+
+# Add the executable and include the resource files
+add_executable(CypherVault WIN32 ${SOURCES} ${MOC_HEADERS} ${RESOURCE_FILES} app.rc)
 
 target_include_directories(CypherVault PRIVATE src)
 

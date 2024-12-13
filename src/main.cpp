@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
   // This initialises Window on run
   MainWindow mainWindow;
   mainWindow.show();
-
+  mainWindow.setWindowIcon(QIcon(":/icon.ico")); // Ensure the icon is included in your resources
   return app.exec();
 }
 
