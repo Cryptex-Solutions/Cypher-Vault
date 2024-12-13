@@ -1,6 +1,2 @@
-# Blacklist everything by default
-*
-
-# Whitelist the src/ folder
-!src/
-
+build
+.cache
