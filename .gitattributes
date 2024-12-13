@@ -1,0 +1,2 @@
+*.rc     text eol=crlf
+*.qrc    text eol=crlf
