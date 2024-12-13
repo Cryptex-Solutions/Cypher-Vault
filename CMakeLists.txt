@@ -35,7 +35,7 @@ set(HEADERS
 # Qt's Meta-Object Compiler (moc) for headers
 qt5_wrap_cpp(MOC_HEADERS ${HEADERS})
 
-add_executable(CypherVault ${SOURCES} ${MOC_HEADERS})
+add_executable(CypherVault WIN32 ${SOURCES} ${MOC_HEADERS})
 
 target_include_directories(CypherVault PRIVATE src)
 
