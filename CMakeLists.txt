@@ -28,6 +28,7 @@ set(HEADERS
     src/SvgIcons.h
     src/SvgManager.h
     src/SideBar.h
+    src/OSDetector.h
 )
 
 # Qt's Meta-Object Compiler (moc) for headers
