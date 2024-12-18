@@ -1,9 +1,8 @@
 #include "MainWindow.h"
-#include "OSDetector.h"
 #include "SvgIcons.h"
 #include "SvgManager.h"
 #include <QApplication>
-#include <iostream>
+#include <cstdlib>
 
 int main(int argc, char *argv[]) {
   QApplication app(argc, argv);
@@ -23,18 +22,6 @@ int main(int argc, char *argv[]) {
   mainWindow.show();
   mainWindow.setWindowIcon(
       QIcon(":/icon.ico")); // Ensure the icon is included in your resources
-
-  OSDetector::OS os = OSDetector::getOS();
-
-  if (os == OSDetector::OS::Windows) {
-    std::cout << "The operating system is Windows." << std::endl;
-  } else if (os == OSDetector::OS::macOS) {
-    std::cout << "The operating system is macOS." << std::endl;
-  } else if (os == OSDetector::OS::Linux) {
-    std::cout << "The operating system is Linux." << std::endl;
-  } else {
-    std::cout << "The operating system is unsupported" << std::endl;
-  }
 
   return app.exec();
 }
