@@ -1,8 +1,10 @@
 #include "MainWindow.h"
 #include "SvgIcons.h"
 #include "SvgManager.h"
+#include "Utils.h"
 #include <QApplication>
 #include <cstdlib>
+#include <iostream>
 
 int main(int argc, char *argv[]) {
   QApplication app(argc, argv);
@@ -22,6 +24,10 @@ int main(int argc, char *argv[]) {
   mainWindow.show();
   mainWindow.setWindowIcon(
       QIcon(":/icon.ico")); // Ensure the icon is included in your resources
+
+  // Test path shit
+  std::cout << Utils::getConfigPath() << std::endl;
+  std::cout << Utils::getDependenciesPath() << std::endl;
 
   return app.exec();
 }

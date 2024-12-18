@@ -1,6 +1,6 @@
 #include "Utils.h"
+#include "OSDetector.h"
 #include <cstdlib> // for getenv
-#include <filesystem>
 
 std::string Utils::getConfigPath() {
   OSDetector::OS os = OSDetector::getOS();
