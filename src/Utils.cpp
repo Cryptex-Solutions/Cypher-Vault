@@ -7,12 +7,12 @@ std::string Utils::getConfigPath() {
 
   switch (os) {
   case OSDetector::OS::Windows:
-    return std::string(getenv("APPDATA")) + "\\YourAppName\\config";
+    return std::string(getenv("APPDATA")) + "\\CypherVault\\config";
   case OSDetector::OS::Linux:
-    return std::string(getenv("HOME")) + "/.config/YourAppName";
+    return std::string(getenv("HOME")) + "/.config/CypherVault";
   case OSDetector::OS::macOS:
     return std::string(getenv("HOME")) +
-           "/Library/Application Support/YourAppName";
+           "/Library/Application Support/CypherVault";
   default:
     return "./config"; // Fallback to current directory
   }
@@ -23,13 +23,13 @@ std::string Utils::getDependenciesPath() {
 
   switch (os) {
   case OSDetector::OS::Windows:
-    return std::string(getenv("APPDATA")) + "\\YourAppName\\dependencies";
+    return std::string(getenv("APPDATA")) + "\\CypherVault\\dependencies";
   case OSDetector::OS::Linux:
     return std::string(getenv("HOME")) +
-           "/.local/share/YourAppName/dependencies";
+           "/.local/share/CypherVault/dependencies";
   case OSDetector::OS::macOS:
     return std::string(getenv("HOME")) +
-           "/Library/Application Support/YourAppName/dependencies";
+           "/Library/Application Support/CypherVault/dependencies";
   default:
     return "./dependencies"; // Fallback to current directory
   }
