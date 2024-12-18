@@ -38,7 +38,7 @@ qt5_wrap_cpp(MOC_HEADERS ${HEADERS})
 qt5_add_resources(RESOURCE_FILES src/resources.qrc)
 
 # Add the executable and include the resource files
-add_executable(CypherVault WIN32 ${SOURCES} ${MOC_HEADERS} ${RESOURCE_FILES} app.rc)
+add_executable(CypherVault ${SOURCES} ${MOC_HEADERS} ${RESOURCE_FILES} app.rc)
 
 target_include_directories(CypherVault PRIVATE src)
 
