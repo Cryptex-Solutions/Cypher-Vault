@@ -24,19 +24,16 @@ int main(int argc, char *argv[]) {
   mainWindow.setWindowIcon(
       QIcon(":/icon.ico")); // Ensure the icon is included in your resources
 
-  OSDetector::OSType os = OSDetector::getOSType();
-  std::string osName = OSDetector::getOSName();
+  OSDetector::OS os = OSDetector::getOS();
 
-  std::cout << "Operating System: " << osName << std::endl;
-
-  if (os == OSDetector::Windows) {
-    std::cout << "This code is running on Windows." << std::endl;
-  } else if (os == OSDetector::Linux) {
-    std::cout << "This code is running on Linux." << std::endl;
-  } else if (os == OSDetector::MacOS) {
-    std::cout << "This code is running on macOS." << std::endl;
+  if (os == OSDetector::OS::Windows) {
+    std::cout << "The operating system is Windows." << std::endl;
+  } else if (os == OSDetector::OS::macOS) {
+    std::cout << "The operating system is macOS." << std::endl;
+  } else if (os == OSDetector::OS::Linux) {
+    std::cout << "The operating system is Linux." << std::endl;
   } else {
-    std::cout << "Unknown operating system." << std::endl;
+    std::cout << "The operating system is unsupported" << std::endl;
   }
 
   return app.exec();

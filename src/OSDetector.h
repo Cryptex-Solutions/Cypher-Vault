@@ -1,38 +1,25 @@
-#ifndef OSDETECTOR_H
-#define OSDETECTOR_H
-
-#include <string>
+#ifndef OS_DETECTOR_H
+#define OS_DETECTOR_H
 
 class OSDetector {
 public:
-  enum OSType { Windows, Linux, MacOS, Unknown };
+  enum class OS { Windows, macOS, Linux, Unix, POSIX, Unknown };
 
-  // Function to get the OS type
-  static OSType getOSType() {
-#ifdef _WIN32
-    return Windows;
-#elif __linux__
-    return Linux;
-#elif __APPLE__
-    return MacOS;
+  static OS getOS() {
+#if defined(_WIN32) || defined(_WIN64)
+    return OS::Windows;
+#elif defined(__APPLE__) || defined(__MACH__)
+    return OS::macOS;
+#elif defined(__linux__)
+    return OS::Linux;
+#elif defined(__unix__)
+    return OS::Unix;
+#elif defined(_POSIX_VERSION)
+    return OS::POSIX;
 #else
-    return Unknown;
+    return OS::Unknown;
 #endif
-  }
-
-  // Function to get the OS name as a string
-  static std::string getOSName() {
-    switch (getOSType()) {
-    case Windows:
-      return "Windows";
-    case Linux:
-      return "Linux";
-    case MacOS:
-      return "MacOS";
-    default:
-      return "Unknown";
-    }
   }
 };
 
-#endif // OSDETECTOR_H
+#endif // OS_DETECTOR_H
