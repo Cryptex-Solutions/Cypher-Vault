@@ -17,6 +17,7 @@ set(SOURCES
     src/SvgManager.cpp
     src/SideBar.cpp
     src/OSDetector.cpp
+    src/ConfigManager.cpp
 )
 
 set(HEADERS
@@ -30,6 +31,7 @@ set(HEADERS
     src/SvgManager.h
     src/SideBar.h
     src/OSDetector.h
+    src/ConfigManager.h
 )
 
 # Qt's Meta-Object Compiler (moc) for headers
@@ -41,7 +43,7 @@ qt5_add_resources(RESOURCE_FILES src/resources.qrc)
 # Add the executable and include the resource files
 add_executable(CypherVault ${SOURCES} ${MOC_HEADERS} ${RESOURCE_FILES} app.rc)
 
-target_include_directories(CypherVault PRIVATE src)
+target_include_directories(CypherVault PRIVATE src dependencies/toml++)
 
 # Link the libraries for Widgets and Svg
 target_link_libraries(CypherVault Qt5::Widgets Qt5::Svg)
