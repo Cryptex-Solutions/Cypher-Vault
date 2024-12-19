@@ -1,3 +1,4 @@
+#include "ConfigManager.h"
 #include "MainWindow.h"
 #include "SvgIcons.h"
 #include "SvgManager.h"
@@ -5,16 +6,15 @@
 #include <QApplication>
 #include <cstdlib>
 #include <iostream>
-#include <toml.h>
-
-void TestTOML() {
-
-  auto config = toml::parse("key = 'value'");
-  std::cout << "Parsed value: " << config["key"].value_or("Error") << std::endl;
-}
 
 int main(int argc, char *argv[]) {
   QApplication app(argc, argv);
+
+  // Load config file
+  ConfigManager::instance().loadConfig();
+
+  ConfigManager config;
+  config.loadConfig();
 
   // Load icons into SvgManager
   SvgManager::instance().loadSvg("Minus", SvgIcons::TitleIconMinus);
@@ -35,8 +35,6 @@ int main(int argc, char *argv[]) {
   // Test path shit
   std::cout << Utils::getConfigPath() << std::endl;
   std::cout << Utils::getDependenciesPath() << std::endl;
-
-  TestTOML();
 
   return app.exec();
 }

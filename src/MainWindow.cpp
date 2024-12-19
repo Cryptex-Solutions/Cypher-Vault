@@ -1,4 +1,5 @@
 #include "MainWindow.h"
+#include "ConfigManager.h"
 #include "SideBar.h"
 #include "SvgManager.h"
 #include "ThemeManager.h"
@@ -7,13 +8,20 @@
 
 ThemeManager &themeManager = ThemeManager::instance();
 SvgManager &svgManager = SvgManager::instance();
+ConfigManager &configManager = ConfigManager::instance();
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
   setObjectName("MainWindow");
   setupUI();
   setupConnections();
 
-  themeManager.setDarkMode(themeManager.isDarkMode());
+  toml::table config = configManager.loadConfig();
+
+  bool darkMode = config.contains("theme_darkmode")
+                      ? config["theme_darkmode"].as_boolean()->get()
+                      : false; // Default to false if the config file fucks up
+  themeManager.setDarkMode(darkMode);
+
   applyTheme();
 }
 
@@ -67,6 +75,8 @@ void MainWindow::applyTheme() {
 }
 
 void MainWindow::toggleTheme() {
-  themeManager.setDarkMode(!themeManager.isDarkMode());
+  bool toggleDarkMode = !themeManager.isDarkMode();
+
+  themeManager.setDarkMode(toggleDarkMode);
   applyTheme();
 }
