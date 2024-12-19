@@ -16,6 +16,7 @@ set(SOURCES
     src/TitleBar.cpp
     src/SvgManager.cpp
     src/SideBar.cpp
+    src/OSDetector.cpp
 )
 
 set(HEADERS

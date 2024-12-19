@@ -3,9 +3,7 @@
 #include <cstdlib> // for getenv
 
 std::string Utils::getConfigPath() {
-  OSDetector::OS os = OSDetector::getOS();
-
-  switch (os) {
+  switch (OSDetector::getOS()) { // Use the static detected OS directly
   case OSDetector::OS::Windows:
     return std::string(getenv("APPDATA")) + "\\CypherVault\\config";
   case OSDetector::OS::Linux:
@@ -19,9 +17,7 @@ std::string Utils::getConfigPath() {
 }
 
 std::string Utils::getDependenciesPath() {
-  OSDetector::OS os = OSDetector::getOS();
-
-  switch (os) {
+  switch (OSDetector::getOS()) { // Use the static detected OS directly
   case OSDetector::OS::Windows:
     return std::string(getenv("APPDATA")) + "\\CypherVault\\dependencies";
   case OSDetector::OS::Linux:
