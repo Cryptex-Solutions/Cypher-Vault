@@ -1,27 +1,15 @@
 #include "MainWindow.h"
-#include "ConfigManager.h"
+#include "Globals.h"
+
 #include "SideBar.h"
-#include "SvgManager.h"
-#include "ThemeManager.h"
 #include <QPushButton>
 #include <QVBoxLayout>
-
-ThemeManager &themeManager = ThemeManager::instance();
-SvgManager &svgManager = SvgManager::instance();
-ConfigManager &configManager = ConfigManager::instance();
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
   setObjectName("MainWindow");
   setupUI();
   setupConnections();
-
-  toml::table config = configManager.loadConfig();
-
-  bool darkMode = config.contains("theme_darkmode")
-                      ? config["theme_darkmode"].as_boolean()->get()
-                      : false; // Default to false if the config file fucks up
-  themeManager.setDarkMode(darkMode);
-
+  setupSettings();
   applyTheme();
 }
 
@@ -76,7 +64,18 @@ void MainWindow::applyTheme() {
 
 void MainWindow::toggleTheme() {
   bool toggleDarkMode = !themeManager.isDarkMode();
-
+  // Save to file
+  config.insert_or_assign("theme_darkmode", toggleDarkMode);
+  configManager.saveConfig(config);
+  // actually change the theme
   themeManager.setDarkMode(toggleDarkMode);
   applyTheme();
+}
+
+void MainWindow::setupSettings() {
+  // Load Darkmode from file
+  bool darkMode = config.contains("theme_darkmode")
+                      ? config["theme_darkmode"].as_boolean()->get()
+                      : false; // Default to false if the config file breaks
+  themeManager.setDarkMode(darkMode);
 }

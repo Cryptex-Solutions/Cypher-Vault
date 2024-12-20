@@ -56,3 +56,22 @@ toml::table ConfigManager::loadConfig() {
     return {};
   }
 }
+
+void ConfigManager::saveConfig(const toml::table &config) {
+  try {
+    // Open the config file for writing
+    std::ofstream configFileStream(configFile);
+    if (configFileStream) {
+      // Write the updated config to the file
+      configFileStream << config;
+      configFileStream.close();
+      std::cout << "Configuration saved successfully to: " << configFile
+                << std::endl;
+    } else {
+      std::cerr << "Failed to open config file for saving: " << configFile
+                << std::endl;
+    }
+  } catch (const std::exception &e) {
+    std::cerr << "Error saving config file: " << e.what() << std::endl;
+  }
+}

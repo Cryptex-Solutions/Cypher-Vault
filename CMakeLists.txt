@@ -18,6 +18,7 @@ set(SOURCES
     src/SideBar.cpp
     src/OSDetector.cpp
     src/ConfigManager.cpp
+    src/Globals.cpp
 )
 
 set(HEADERS
@@ -32,6 +33,7 @@ set(HEADERS
     src/SideBar.h
     src/OSDetector.h
     src/ConfigManager.h
+    src/Globals.h
 )
 
 # Qt's Meta-Object Compiler (moc) for headers

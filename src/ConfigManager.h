@@ -12,6 +12,7 @@ public:
   toml::table loadConfig();
 
   static ConfigManager &instance();
+  void saveConfig(const toml::table &config);
 
 private:
   std::string configPath;

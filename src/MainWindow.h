@@ -12,15 +12,15 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
-  void applyTheme();
-
 private:
   QVBoxLayout *mainLayout;
   TitleBar *titleBar;
 
   void setupUI();
   void setupConnections();
+  void setupSettings();
   void toggleTheme();
+  void applyTheme();
 };
 
 #endif // MAINWINDOW_H
