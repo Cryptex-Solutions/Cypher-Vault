@@ -1,6 +1,7 @@
 #include "MainWindow.h"
 #include "Globals.h"
 
+#include "ExitConfirmationDialog.h"
 #include "QMessageBox"
 #include "SideBar.h"
 #include <QPushButton>
@@ -84,14 +85,28 @@ void MainWindow::closeEvent(QCloseEvent *event) {
   // Save the config file
   configManager.saveConfig(config);
 
-  QMessageBox::StandardButton reply = QMessageBox::question(
-      this, "Exit Confirmation", "Are you sure you want to exit?",
-      QMessageBox::Yes | QMessageBox::No);
+  ExitConfirmationDialog dialog(this);
 
-  if (reply == QMessageBox::Yes) {
-    // Perform additional cleanup if necessary
-    event->accept(); // Allow the window to close
+  bool dontShowAgainPopup =
+      config.contains("exitPopupDontShowAgain")
+          ? config["exitPopupDontShowAgain"].as_boolean()->get()
+          : false;
+
+  if (!dontShowAgainPopup) {
+    if (dialog.exec() == QDialog::Accepted) {
+      // Handle minimize logic here
+      event->ignore();
+      // Minimize to tray logic
+    } else {
+      // Check if "never show again" is selected
+      if (dialog.neverShowAgain()) {
+        // Save preference to settings
+        config.insert_or_assign("exitPopupDontShowAgain", true);
+        configManager.saveConfig(config);
+      }
+      event->accept(); // Close the application
+    }
   } else {
-    event->ignore(); // Prevent the window from closing
+    event->accept();
   }
 }

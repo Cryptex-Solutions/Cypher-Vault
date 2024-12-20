@@ -19,6 +19,7 @@ set(SOURCES
     src/OSDetector.cpp
     src/ConfigManager.cpp
     src/Globals.cpp
+    src/ExitConfirmationDialog.cpp
 )
 
 set(HEADERS
@@ -34,6 +35,7 @@ set(HEADERS
     src/OSDetector.h
     src/ConfigManager.h
     src/Globals.h
+    src/ExitConfirmationDialog.h
 )
 
 # Qt's Meta-Object Compiler (moc) for headers

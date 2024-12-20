@@ -3,6 +3,7 @@
 #include "SvgIcons.h"
 #include <QApplication>
 #include <cstdlib>
+
 int main(int argc, char *argv[]) {
   QApplication app(argc, argv);
 
