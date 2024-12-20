@@ -1,6 +1,7 @@
 #include "MainWindow.h"
 #include "Globals.h"
 
+#include "QMessageBox"
 #include "SideBar.h"
 #include <QPushButton>
 #include <QVBoxLayout>
@@ -64,9 +65,8 @@ void MainWindow::applyTheme() {
 
 void MainWindow::toggleTheme() {
   bool toggleDarkMode = !themeManager.isDarkMode();
-  // Save to file
+  // change the config file
   config.insert_or_assign("theme_darkmode", toggleDarkMode);
-  configManager.saveConfig(config);
   // actually change the theme
   themeManager.setDarkMode(toggleDarkMode);
   applyTheme();
@@ -78,4 +78,20 @@ void MainWindow::setupSettings() {
                       ? config["theme_darkmode"].as_boolean()->get()
                       : false; // Default to false if the config file breaks
   themeManager.setDarkMode(darkMode);
+}
+
+void MainWindow::closeEvent(QCloseEvent *event) {
+  // Save the config file
+  configManager.saveConfig(config);
+
+  QMessageBox::StandardButton reply = QMessageBox::question(
+      this, "Exit Confirmation", "Are you sure you want to exit?",
+      QMessageBox::Yes | QMessageBox::No);
+
+  if (reply == QMessageBox::Yes) {
+    // Perform additional cleanup if necessary
+    event->accept(); // Allow the window to close
+  } else {
+    event->ignore(); // Prevent the window from closing
+  }
 }

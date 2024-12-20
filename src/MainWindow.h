@@ -12,6 +12,9 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
+protected:
+  void closeEvent(QCloseEvent *event) override;
+
 private:
   QVBoxLayout *mainLayout;
   TitleBar *titleBar;
