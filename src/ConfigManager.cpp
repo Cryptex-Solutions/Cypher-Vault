@@ -33,7 +33,7 @@ ConfigManager::ConfigManager() {
 void ConfigManager::createDefaultConfig() {
   toml::table defaultConfig;
 
-  // Add darkmode setting
+  // Add default settings
   defaultConfig.insert("theme_darkmode", false);
   defaultConfig.insert("exitPopupDontShowAgain", false);
 
