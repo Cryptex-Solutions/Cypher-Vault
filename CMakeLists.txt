@@ -20,6 +20,7 @@ set(SOURCES
     src/ConfigManager.cpp
     src/Globals.cpp
     src/ExitConfirmationDialog.cpp
+    src/TrayManager.cpp
 )
 
 set(HEADERS
@@ -36,16 +37,20 @@ set(HEADERS
     src/ConfigManager.h
     src/Globals.h
     src/ExitConfirmationDialog.h
+    src/TrayManager.h
 )
+
+# Add the resource file to the project
+set(RESOURCE_FILE src/resources.qrc)
 
 # Qt's Meta-Object Compiler (moc) for headers
 qt5_wrap_cpp(MOC_HEADERS ${HEADERS})
 
-# Add resources.qrc for embedding resources like the application icon
-qt5_add_resources(RESOURCE_FILES src/resources.qrc)
+# Process the .qrc file with qt5_add_resources
+qt5_add_resources(RESOURCES ${RESOURCE_FILE})
 
 # Add the executable and include the resource files
-add_executable(CypherVault ${SOURCES} ${MOC_HEADERS} ${RESOURCE_FILES} app.rc)
+add_executable(CypherVault ${SOURCES} ${MOC_HEADERS} ${RESOURCES})
 
 target_include_directories(CypherVault PRIVATE src dependencies/toml++)
 

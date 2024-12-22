@@ -81,32 +81,58 @@ void MainWindow::setupSettings() {
   themeManager.setDarkMode(darkMode);
 }
 
+void minimiseToTrayFunction() {
+  // TEMP FUNC
+}
+
 void MainWindow::closeEvent(QCloseEvent *event) {
-  // Save the config file
+  // Save the current configuration
   configManager.saveConfig(config);
 
-  ExitConfirmationDialog dialog(this);
-
+  // Check if the "Don't Show Again" option is enabled
   bool dontShowAgainPopup =
       config.contains("exitPopupDontShowAgain")
           ? config["exitPopupDontShowAgain"].as_boolean()->get()
           : false;
 
-  if (!dontShowAgainPopup) {
-    if (dialog.exec() == QDialog::Accepted) {
-      // Handle minimize logic here
+  // Handle "Don't Show Again" logic
+  if (dontShowAgainPopup) {
+    bool minimiseToTray = config.contains("exitMinimiseToTray")
+                              ? config["exitMinimiseToTray"].as_boolean()->get()
+                              : false;
+
+    if (minimiseToTray) {
+      // Minimize to tray
       event->ignore();
-      // Minimize to tray logic
+      minimiseToTrayFunction();
     } else {
-      // Check if "never show again" is selected
-      if (dialog.neverShowAgain()) {
-        // Save preference to settings
-        config.insert_or_assign("exitPopupDontShowAgain", true);
-        configManager.saveConfig(config);
-      }
-      event->accept(); // Close the application
+      // Close the application
+      event->accept();
     }
+    return;
+  }
+
+  // Show the exit confirmation dialog
+  ExitConfirmationDialog dialog(this);
+
+  // Determine user choice
+  bool minimiseToTray = (dialog.exec() == QDialog::Accepted);
+
+  // Check "Never Show Again" option
+  if (dialog.neverShowAgain()) {
+    config.insert_or_assign("exitPopupDontShowAgain", true);
+  }
+
+  // Update minimize/exit preference and act accordingly
+  config.insert_or_assign("exitMinimiseToTray", minimiseToTray);
+
+  if (minimiseToTray) {
+    event->ignore();
+    minimiseToTrayFunction();
   } else {
     event->accept();
   }
+
+  // Save the updated configuration
+  configManager.saveConfig(config);
 }

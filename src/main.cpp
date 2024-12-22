@@ -1,11 +1,15 @@
 #include "Globals.h"
 #include "MainWindow.h"
 #include "SvgIcons.h"
+#include "TrayManager.h"
 #include <QApplication>
 #include <cstdlib>
 
 int main(int argc, char *argv[]) {
   QApplication app(argc, argv);
+
+  // Set the application icon
+  app.setWindowIcon(QIcon(":/icons/resources/icon.png"));
 
   // Load Config file
   configManager.loadConfig();
@@ -22,9 +26,11 @@ int main(int argc, char *argv[]) {
 
   // This initialises Window on run
   MainWindow mainWindow;
+  mainWindow.setWindowIcon(QIcon(":/icons/resources/icon.png"));
   mainWindow.show();
-  mainWindow.setWindowIcon(
-      QIcon(":/icon.ico")); // Ensure the icon is included in your resources
+
+  TrayManager trayManager;
+  trayManager.showTrayIcon();
 
   return app.exec();
 }

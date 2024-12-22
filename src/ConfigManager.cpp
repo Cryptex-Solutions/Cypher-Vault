@@ -36,6 +36,7 @@ void ConfigManager::createDefaultConfig() {
   // Add default settings
   defaultConfig.insert("theme_darkmode", false);
   defaultConfig.insert("exitPopupDontShowAgain", false);
+  defaultConfig.insert_or_assign("exitMinimiseToTray", false);
 
   // Save the default configuration to the file
   std::ofstream configFileStream(configFile);
