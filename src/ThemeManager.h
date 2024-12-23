@@ -4,20 +4,16 @@
 #include <QPalette>
 #include <QString>
 #include <functional>
-#include <vector>
 
 class ThemeManager {
 public:
-  // Singleton instance accessor
   static ThemeManager &instance();
 
-  // Setters
   void setDarkMode(bool enable);
   bool isDarkMode() const;
 
   QString getGroupColor(const QString &groupName) const;
 
-  // Getters
   QPalette getPalette() const;
   QString getStyleSheet() const;
 

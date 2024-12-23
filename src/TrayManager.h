@@ -5,7 +5,7 @@
 #include <QObject>
 #include <QSystemTrayIcon>
 
-class MainWindow; // Forward declaration
+class MainWindow;
 
 class TrayManager : public QObject {
   Q_OBJECT
@@ -25,7 +25,7 @@ private:
   QMenu *trayMenu;
   QAction *showAction;
   QAction *quitAction;
-  MainWindow *mainWindow; // Reference to MainWindow
+  MainWindow *mainWindow;
 };
 
 #endif // TRAYMANAGER_H

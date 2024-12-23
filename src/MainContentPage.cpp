@@ -8,5 +8,3 @@ MainContentPage::MainContentPage(QWidget *parent) : QWidget(parent) {
   layout->addWidget(label);
   setLayout(layout);
 }
-
-//newest change

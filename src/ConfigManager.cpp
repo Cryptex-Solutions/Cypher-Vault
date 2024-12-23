@@ -5,7 +5,6 @@
 #include <iostream>
 #include <toml.h>
 
-// Singleton instance
 ConfigManager &ConfigManager::instance() {
   static ConfigManager instance;
   return instance;
@@ -18,13 +17,11 @@ ConfigManager::ConfigManager() {
   configPath = Utils::getConfigPath();
   configFile = configPath + "/settings.toml";
 
-  // Ensure the config directory exists
   if (!fs::exists(configPath)) {
     fs::create_directories(configPath);
     std::cout << "Created config directory: " << configPath << std::endl;
   }
 
-  // Ensure the config file exists
   if (!fs::exists(configFile)) {
     createDefaultConfig();
   }
@@ -33,12 +30,10 @@ ConfigManager::ConfigManager() {
 void ConfigManager::createDefaultConfig() {
   toml::table defaultConfig;
 
-  // Add default settings
   defaultConfig.insert("theme_darkmode", false);
   defaultConfig.insert("exitPopupDontShowAgain", false);
   defaultConfig.insert_or_assign("exitMinimiseToTray", false);
 
-  // Save the default configuration to the file
   std::ofstream configFileStream(configFile);
   if (configFileStream) {
     configFileStream << defaultConfig;
@@ -61,10 +56,8 @@ toml::table ConfigManager::loadConfig() {
 
 void ConfigManager::saveConfig(const toml::table &config) {
   try {
-    // Open the config file for writing
     std::ofstream configFileStream(configFile);
     if (configFileStream) {
-      // Write the updated config to the file
       configFileStream << config;
       configFileStream.close();
       std::cout << "Configuration saved successfully to: " << configFile

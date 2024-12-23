@@ -8,7 +8,6 @@ class ConfigManager {
 public:
   ConfigManager();
 
-  // Loads the configuration into a TOML table
   toml::table loadConfig();
 
   static ConfigManager &instance();

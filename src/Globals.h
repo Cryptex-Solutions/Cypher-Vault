@@ -6,7 +6,6 @@
 #include "ThemeManager.h"
 #include <toml.h>
 
-// Global variables
 extern toml::table config;
 extern ThemeManager &themeManager;
 extern SvgManager &svgManager;

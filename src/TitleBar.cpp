@@ -5,12 +5,10 @@
 TitleBar::TitleBar(QWidget *parent) : QWidget(parent), dragPosition(QPoint()) {
   setObjectName("TitleBar");
 
-  // Create the title bar panel widget
   panel = new QWidget(this);
 
   panel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
-  // Create title bar components
   titleLabel = new QLabel("Cypher-Vault", this);
   titleLabel->setContentsMargins(5, 5, 5, 5);
 
@@ -18,10 +16,8 @@ TitleBar::TitleBar(QWidget *parent) : QWidget(parent), dragPosition(QPoint()) {
   maximizeButton = new QPushButton(this);
   closeButton = new QPushButton(this);
 
-  // Initial icons
   updateIcons();
 
-  // Set button sizes
   minimizeButton->setIconSize(QSize(25, 25));
   maximizeButton->setIconSize(QSize(25, 25));
   closeButton->setIconSize(QSize(25, 25));
@@ -30,7 +26,6 @@ TitleBar::TitleBar(QWidget *parent) : QWidget(parent), dragPosition(QPoint()) {
   maximizeButton->setFixedSize(30, 30);
   closeButton->setFixedSize(30, 30);
 
-  // Create layout
   QHBoxLayout *layout = new QHBoxLayout(panel);
   layout->addWidget(titleLabel);
   layout->addStretch();
@@ -40,20 +35,17 @@ TitleBar::TitleBar(QWidget *parent) : QWidget(parent), dragPosition(QPoint()) {
   layout->setContentsMargins(5, 5, 5, 5);
   layout->setSpacing(5);
 
-  // Add the panel to the main layout of TitleBar
   QVBoxLayout *titleBarLayout = new QVBoxLayout(this);
   titleBarLayout->addWidget(panel);
   titleBarLayout->setContentsMargins(0, 0, 0, 0);
   titleBarLayout->setSpacing(0);
 
-  // Connect signals
   connect(minimizeButton, &QPushButton::clicked, this,
           &TitleBar::minimizeRequested);
   connect(maximizeButton, &QPushButton::clicked, this,
           &TitleBar::maximizeRequested);
   connect(closeButton, &QPushButton::clicked, this, &TitleBar::closeRequested);
 
-  // Register observer for theme changes
   ThemeManager::instance().addObserver([this]() { updateIcons(); });
 }
 
@@ -63,14 +55,12 @@ void TitleBar::updateIcons() {
   closeButton->setIcon(SvgManager::instance().getIcon("Close"));
 }
 
-// Override mouseDoubleClickEvent to toggle maximize/restore
 void TitleBar::mouseDoubleClickEvent(QMouseEvent *event) {
   if (event->button() == Qt::LeftButton) {
-    // Check if the window is already maximized
     if (parentWidget()->isMaximized()) {
-      parentWidget()->showNormal(); // Restore the window to its previous size
+      parentWidget()->showNormal();
     } else {
-      parentWidget()->showMaximized(); // Maximize the window
+      parentWidget()->showMaximized();
     }
   }
 }
