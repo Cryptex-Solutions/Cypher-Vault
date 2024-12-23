@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include "TitleBar.h"
+#include "TrayManager.h"
 #include <QVBoxLayout>
 #include <QWidget>
 
@@ -12,12 +13,15 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
+  void ShowUI();
+
 protected:
   void closeEvent(QCloseEvent *event) override;
 
 private:
   QVBoxLayout *mainLayout;
   TitleBar *titleBar;
+  TrayManager *trayManager;
 
   void setupUI();
   void setupConnections();

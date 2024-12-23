@@ -1,9 +1,9 @@
 #include "Utils.h"
 #include "OSDetector.h"
-#include <cstdlib> // for getenv
+#include <cstdlib>
 
 std::string Utils::getConfigPath() {
-  switch (OSDetector::getOS()) { // Use the static detected OS directly
+  switch (OSDetector::getOS()) {
   case OSDetector::OS::Windows:
     return std::string(getenv("APPDATA")) + "\\CypherVault\\config";
   case OSDetector::OS::Linux:
@@ -12,12 +12,12 @@ std::string Utils::getConfigPath() {
     return std::string(getenv("HOME")) +
            "/Library/Application Support/CypherVault";
   default:
-    return "./config"; // Fallback to current directory
+    return "./config";
   }
 }
 
 std::string Utils::getDependenciesPath() {
-  switch (OSDetector::getOS()) { // Use the static detected OS directly
+  switch (OSDetector::getOS()) {
   case OSDetector::OS::Windows:
     return std::string(getenv("APPDATA")) + "\\CypherVault\\dependencies";
   case OSDetector::OS::Linux:
@@ -27,6 +27,6 @@ std::string Utils::getDependenciesPath() {
     return std::string(getenv("HOME")) +
            "/Library/Application Support/CypherVault/dependencies";
   default:
-    return "./dependencies"; // Fallback to current directory
+    return "./dependencies";
   }
 }

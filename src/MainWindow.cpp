@@ -8,6 +8,9 @@
 #include <QVBoxLayout>
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
+  trayManager = new TrayManager(this, this);
+  trayManager->showTrayIcon();
+
   setObjectName("MainWindow");
   setupUI();
   setupConnections();
@@ -66,73 +69,61 @@ void MainWindow::applyTheme() {
 
 void MainWindow::toggleTheme() {
   bool toggleDarkMode = !themeManager.isDarkMode();
-  // change the config file
   config.insert_or_assign("theme_darkmode", toggleDarkMode);
-  // actually change the theme
   themeManager.setDarkMode(toggleDarkMode);
   applyTheme();
 }
 
 void MainWindow::setupSettings() {
-  // Load Darkmode from file
   bool darkMode = config.contains("theme_darkmode")
                       ? config["theme_darkmode"].as_boolean()->get()
-                      : false; // Default to false if the config file breaks
+                      : false;
   themeManager.setDarkMode(darkMode);
 }
 
-void minimiseToTrayFunction() {
-  // TEMP FUNC
-}
-
 void MainWindow::closeEvent(QCloseEvent *event) {
-  // Save the current configuration
   configManager.saveConfig(config);
 
-  // Check if the "Don't Show Again" option is enabled
   bool dontShowAgainPopup =
       config.contains("exitPopupDontShowAgain")
           ? config["exitPopupDontShowAgain"].as_boolean()->get()
           : false;
 
-  // Handle "Don't Show Again" logic
   if (dontShowAgainPopup) {
     bool minimiseToTray = config.contains("exitMinimiseToTray")
                               ? config["exitMinimiseToTray"].as_boolean()->get()
                               : false;
 
     if (minimiseToTray) {
-      // Minimize to tray
       event->ignore();
-      minimiseToTrayFunction();
+      hide();
     } else {
-      // Close the application
       event->accept();
     }
     return;
   }
 
-  // Show the exit confirmation dialog
   ExitConfirmationDialog dialog(this);
 
-  // Determine user choice
   bool minimiseToTray = (dialog.exec() == QDialog::Accepted);
 
-  // Check "Never Show Again" option
   if (dialog.neverShowAgain()) {
     config.insert_or_assign("exitPopupDontShowAgain", true);
   }
 
-  // Update minimize/exit preference and act accordingly
   config.insert_or_assign("exitMinimiseToTray", minimiseToTray);
 
   if (minimiseToTray) {
     event->ignore();
-    minimiseToTrayFunction();
+    hide();
   } else {
     event->accept();
   }
 
-  // Save the updated configuration
   configManager.saveConfig(config);
+}
+
+void MainWindow::ShowUI() {
+  show();
+  activateWindow();
 }

@@ -1,10 +1,11 @@
 #include "TrayManager.h"
+#include "MainWindow.h"
 #include <QApplication>
-#include <QMessageBox>
+#include <iostream>
 
-TrayManager::TrayManager(QObject *parent)
+TrayManager::TrayManager(MainWindow *mainWindow, QObject *parent)
     : QObject(parent), trayIcon(new QSystemTrayIcon(this)),
-      trayMenu(new QMenu()) {
+      trayMenu(new QMenu()), mainWindow(mainWindow) {
   // Create actions
   showAction = new QAction("Show", this);
   quitAction = new QAction("Quit", this);
@@ -15,6 +16,14 @@ TrayManager::TrayManager(QObject *parent)
   connect(quitAction, &QAction::triggered, this,
           &TrayManager::onQuitActionTriggered);
 
+  // Connect tray icon activation (double click) to onShowActionTriggered
+  connect(trayIcon, &QSystemTrayIcon::activated, this,
+          [this](QSystemTrayIcon::ActivationReason reason) {
+            if (reason == QSystemTrayIcon::Trigger) {
+              onShowActionTriggered();
+            }
+          });
+
   // Add actions to the tray menu
   trayMenu->addAction(showAction);
   trayMenu->addSeparator();
@@ -24,14 +33,6 @@ TrayManager::TrayManager(QObject *parent)
   trayIcon->setContextMenu(trayMenu);
   trayIcon->setIcon(QIcon(":/icons/resources/icon.png"));
   trayIcon->setToolTip("Tray Application");
-
-  connect(trayIcon, &QSystemTrayIcon::activated, this,
-          [](QSystemTrayIcon::ActivationReason reason) {
-            if (reason == QSystemTrayIcon::Trigger) {
-              QMessageBox::information(nullptr, "Tray Icon",
-                                       "Tray icon clicked!");
-            }
-          });
 }
 
 TrayManager::~TrayManager() {
@@ -42,7 +43,11 @@ TrayManager::~TrayManager() {
 void TrayManager::showTrayIcon() { trayIcon->show(); }
 
 void TrayManager::onShowActionTriggered() {
-  QMessageBox::information(nullptr, "Tray Manager", "Show action triggered!");
+  if (mainWindow) {
+    mainWindow->ShowUI();
+  } else {
+    std::cerr << "MainWindow reference is null" << std::endl;
+  }
 }
 
 void TrayManager::onQuitActionTriggered() { QApplication::quit(); }
