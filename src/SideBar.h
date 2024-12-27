@@ -1,9 +1,8 @@
 #ifndef SIDEBAR_H
 #define SIDEBAR_H
 
-#include <QHBoxLayout>
-#include <QLabel>
 #include <QPushButton>
+#include <QVBoxLayout>
 #include <QWidget>
 
 class SideBar : public QWidget {
@@ -14,6 +13,9 @@ public:
 
 private:
   QWidget *panel;
+  QVBoxLayout *layout;
+  QPushButton *accountsButton;
+  QPushButton *settingsButton;
 };
 
 #endif // SIDEBAR_H

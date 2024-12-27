@@ -5,7 +5,6 @@
 #include "SvgManager.h"
 #include "ThemeManager.h"
 #include <toml.h>
-
 extern toml::table config;
 extern ThemeManager &themeManager;
 extern SvgManager &svgManager;

@@ -1,16 +1,13 @@
 #include "ThemeManager.h"
 
-// Singleton instance
 ThemeManager &ThemeManager::instance() {
   static ThemeManager instance;
   return instance;
 }
 
-// Private constructor
 ThemeManager::ThemeManager() : darkMode(true) { setupStyleSheets(); }
 
 void ThemeManager::setupStyleSheets() {
-  // Dark Style Sheet
   darkStyleSheet = R"(
         #MainWindow {
             background-color: #222;
@@ -33,11 +30,10 @@ void ThemeManager::setupStyleSheets() {
             background-color: #666;
         }
         #SideBar QWidget {
-            background-color: #3D3D3D;
+            background-color: #FF0000;
         }
     )";
 
-  // Light Style Sheet
   lightStyleSheet = R"(
         #MainWindow {
             background-color: #FFFFFF;
@@ -60,7 +56,7 @@ void ThemeManager::setupStyleSheets() {
             background-color: #C0C0C0;
         }
         #SideBar QWidget {
-            background-color: #3D3D3D;
+            background-color: #FF0000;
         }
     )";
 }
@@ -73,7 +69,6 @@ QString ThemeManager::getStyleSheet() const {
   return darkMode ? darkStyleSheet : lightStyleSheet;
 }
 
-// Gets the color for SVG icons
 QString ThemeManager::getGroupColor(const QString &groupName) const {
 
   if (darkMode) {
@@ -93,7 +88,7 @@ QString ThemeManager::getGroupColor(const QString &groupName) const {
       return "#444444";
     }
   }
-  return "#FFFFFF"; // Default color
+  return "#FFFFFF";
 }
 
 void ThemeManager::addObserver(ThemeChangeCallback callback) {

@@ -3,7 +3,6 @@
 
 #include "ExitConfirmationDialog.h"
 #include "QMessageBox"
-#include "SideBar.h"
 #include <QPushButton>
 #include <QVBoxLayout>
 
@@ -23,29 +22,29 @@ MainWindow::~MainWindow() {}
 void MainWindow::setupUI() {
   setWindowFlags(Qt::FramelessWindowHint);
 
-  mainLayout = new QVBoxLayout(this);
+  QGridLayout *mainLayout = new QGridLayout(this);
 
   titleBar = new TitleBar(this);
+  sideBar = new SideBar(this);
 
-  SideBar *sideBar = new SideBar(this);
+  QWidget *contentArea = new QWidget(this);
+  contentArea->setStyleSheet("background-color: lightgray;");
 
-  mainLayout->addWidget(titleBar);
+  mainLayout->addWidget(titleBar, 0, 0, 1, 2);
+  mainLayout->addWidget(sideBar, 1, 0);
+  mainLayout->addWidget(contentArea, 1, 1);
 
-  mainLayout->addWidget(sideBar);
-
-  QPushButton *toggleButton = new QPushButton("Toggle Dark Mode", this);
-  mainLayout->addWidget(toggleButton);
-
-  mainLayout->addStretch();
+  mainLayout->setRowStretch(0, 0);
+  mainLayout->setRowStretch(1, 1);
+  mainLayout->setColumnStretch(0, 1);
+  mainLayout->setColumnStretch(1, 4);
 
   mainLayout->setContentsMargins(0, 0, 0, 0);
   mainLayout->setSpacing(0);
 
+  setLayout(mainLayout);
+
   resize(800, 600);
-
-  connect(toggleButton, &QPushButton::clicked, this, &MainWindow::toggleTheme);
-
-  svgManager.setColorGroup("TitleBar", themeManager.getGroupColor("TitleBar"));
 }
 
 void MainWindow::setupConnections() {

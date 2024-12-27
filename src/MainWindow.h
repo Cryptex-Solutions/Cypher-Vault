@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "SideBar.h"
 #include "TitleBar.h"
 #include "TrayManager.h"
 #include <QVBoxLayout>
@@ -22,6 +23,7 @@ private:
   QVBoxLayout *mainLayout;
   TitleBar *titleBar;
   TrayManager *trayManager;
+  SideBar *sideBar;
 
   void setupUI();
   void setupConnections();

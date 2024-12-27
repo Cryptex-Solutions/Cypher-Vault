@@ -17,17 +17,14 @@ public:
   QPalette getPalette() const;
   QString getStyleSheet() const;
 
-  // Observer pattern
   using ThemeChangeCallback = std::function<void()>;
   void addObserver(ThemeChangeCallback callback);
   void notifyObservers();
 
 private:
-  // Private constructor for singleton
   ThemeManager();
   ~ThemeManager() = default;
 
-  // Delete copy constructor and assignment operator
   ThemeManager(const ThemeManager &) = delete;
   ThemeManager &operator=(const ThemeManager &) = delete;
 
